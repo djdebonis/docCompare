@@ -8,6 +8,38 @@ import getUnique
 import clear
 
 import time
+import nltk.corpus as corpus
+corpus.genesis.fileids()
+genesis = corpus.genesis.raw('english-kjv.txt')
+genesis
+
+def openAndRead(infilePathAndName):
+    """
+    opens a file and returns a long long long string
+    
+    Parameters
+    ----------
+    infilePathAndName : str
+        `infilePathAndName` is the string containing the filepath to the doc the user would like
+        to read in; it is the relative filepath from the current working directory.
+        
+    Returns
+    -------
+    string : str
+        returns a string with all of the text read in from the .txt document directed by `infilePathAndName`
+    
+    See Also
+    --------
+        functions.readData : function tailored to read the specific datasets in this repository
+    
+    
+    """
+    with open(infilePathAndName, 'r') as file:
+        string = file.read()
+        
+    return(string)
+
+revelationRaw = openAndRead("revelation.txt")
 
 rose = "a rose is a rose is a rose is a rose is a rose is a rose"
 # figure out how to deal with contractions
