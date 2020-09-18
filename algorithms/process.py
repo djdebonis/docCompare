@@ -26,7 +26,7 @@ def getTokens(tokens, pattern = r"\w+|\d+"):
     """
     
     # pattern = r"\w+|\d+" # grabs words and numbers; removes punctuation
-    tokens = regexp_tokenize(token, pattern)
+    tokens = regexp_tokenize(tokens, pattern)
     
     return(tokens)
 

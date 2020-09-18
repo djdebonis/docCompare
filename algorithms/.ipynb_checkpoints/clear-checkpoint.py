@@ -43,8 +43,8 @@ def getIntersect(set1, set2):
         if ngram not in intersectSet:
             if ngram in set2:
                 intersectSet.append(ngram)
-                set1.clear(ngram)
-                set2.clear(ngram)
+                set1 = [j for j in set1 if j != ngram]
+                set2 = [j for j in set2 if j != ngram]
     
  
     return(intersectSet)
